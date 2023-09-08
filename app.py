@@ -45,27 +45,6 @@ def update_data():
     df["hour"] = pd.to_datetime(df["Time"], format="%H:%M:%S").dt.hour
     return df
 
-# def select_data():
-#     # Get a list of all files in the folder
-#     file_list = drive.ListFile({'q': "'{}' in parents and trashed=false".format(folder_id)}).GetList()
-#     # Filter the list to include only the files you want to visualize
-#     data_files = [file for file in file_list if file['title'].endswith('.csv') or file['title'].endswith('.xlsx')]
-#     if not data_files:
-#         raise ValueError("No data files found in folder.")
-#     # Create a Streamlit dropdown with the file names
-#     selected_file = st.selectbox('Select a file', [file['title'] for file in data_files])
-#     # Get the selected file
-#     file_id = [file['id'] for file in data_files if file['title'] == selected_file][0]
-#     file = drive.CreateFile({'id': file_id})
-#     file.GetContentFile(selected_file)  # save the selected file locally
-#     # Load the selected file as a pandas dataframe
-#     df = pd.read_excel(selected_file)
-#     # Display the updated DataFrame in Streamlit
-#     # st.write(df)
-#     return df
-
-
-
 ##############################################################################################
 
 
