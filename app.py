@@ -24,8 +24,6 @@ gauth = GoogleAuth()
 drive = GoogleDrive(gauth)
 
 
-folder = '1kms6yyniL37R-UkUV3P4tQk7ay8FeT0Y'
-
 ###################
 
 # Get the ID of the Google Drive folder containing your data
